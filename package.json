@@ -21,6 +21,7 @@
   "dependencies": {
     "@types/node": "^20.14.11",
     "commander": "^12.1.0",
+    "enquirer": "^2.4.1",
     "figlet": "^1.7.0",
     "typescript": "^5.5.3"
   }
