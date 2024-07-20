@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Reminder client",
   "main": "src/index.ts",
-  "type": "module",
   "scripts": {
     "build": "npx tsc",
     "dev": "npx tsc && node ./dist/src/index.js",
     "add": "npx tsc && node ./dist/src/index.js -a",
     "list": "npx tsc && node ./dist/src/index.js -l",
     "remove": "npx tsc && node ./dist/src/index.js -r",
+    "cron": "node ./dist/src/cron.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,8 +25,12 @@
   "dependencies": {
     "@types/node": "^20.14.11",
     "commander": "^12.1.0",
+    "enquirer": "^2.4.1",
     "figlet": "^1.7.0",
     "inquirer": "^10.0.4",
-    "typescript": "^5.5.3"
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.14",
+    "typescript": "^5.5.3",
+    "uuid": "^10.0.0"
   }
 }

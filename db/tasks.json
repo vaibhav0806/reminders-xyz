@@ -1,18 +1,18 @@
 {
   "tasks": [
     {
-      "id": "d4c89e80-5eca-4f51-99a8-da640a74497c",
-      "name": "ff",
-      "reminderType": "hourly",
-      "createdAt": "2024-07-20T08:23:32.563Z",
-      "timeToRemind": "ff"
+      "id": "f5182dba-f9c7-463f-a0a7-cb7cb764a4bf",
+      "name": "Instagram",
+      "reminderType": "minute",
+      "createdAt": "2024-07-20T09:42:30.091Z",
+      "timeToRemind": "00:00"
     },
     {
-      "id": "10a4f82f-fdab-4b9c-9fe5-ccd2117fe2b1",
-      "name": "gym",
-      "reminderType": "hourly",
-      "createdAt": "2024-07-20T08:29:05.081Z",
-      "timeToRemind": "12:00"
+      "id": "befab35b-49a3-4145-8175-ff19294b982b",
+      "name": "Snapchat",
+      "reminderType": "second",
+      "createdAt": "2024-07-20T09:44:28.520Z",
+      "timeToRemind": "00:00"
     }
   ]
 }
