@@ -4,7 +4,7 @@
   "description": "Reminder client",
   "main": "src/index.ts",
   "scripts": {
-    "compile": "npx tsc",
+    "build": "npx tsc",
     "dev": "npx tsc && node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/vaibhav0806/reminders-xyz#readme",
   "dependencies": {
+    "@types/node": "^20.14.11",
+    "commander": "^12.1.0",
+    "figlet": "^1.7.0",
     "typescript": "^5.5.3"
   }
 }

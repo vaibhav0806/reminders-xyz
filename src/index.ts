@@ -1,1 +1,3 @@
-console.log('hello');
+const figlet = require("figlet");
+
+console.log(figlet.textSync("Reminders"));
