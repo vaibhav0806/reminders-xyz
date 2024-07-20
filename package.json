@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Reminder client",
   "main": "src/index.ts",
-  "type": "module",
   "scripts": {
     "build": "npx tsc",
     "dev": "npx tsc && node ./dist/src/index.js",
@@ -24,9 +23,11 @@
   "homepage": "https://github.com/vaibhav0806/reminders-xyz#readme",
   "dependencies": {
     "@types/node": "^20.14.11",
+    "cli-table3": "^0.6.5",
     "commander": "^12.1.0",
+    "enquirer": "^2.4.1",
     "figlet": "^1.7.0",
-    "inquirer": "^10.0.4",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "uuid": "^10.0.0"
   }
 }
