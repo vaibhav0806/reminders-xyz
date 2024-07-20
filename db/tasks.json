@@ -6,13 +6,6 @@
       "reminderType": "hourly",
       "createdAt": "2024-07-20T08:23:32.563Z",
       "timeToRemind": "ff"
-    },
-    {
-      "id": "10a4f82f-fdab-4b9c-9fe5-ccd2117fe2b1",
-      "name": "gym",
-      "reminderType": "hourly",
-      "createdAt": "2024-07-20T08:29:05.081Z",
-      "timeToRemind": "12:00"
     }
   ]
 }
