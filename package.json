@@ -1,0 +1,24 @@
+{
+  "name": "reminders-xyz",
+  "version": "1.0.0",
+  "description": "Reminder client",
+  "main": "src/index.ts",
+  "scripts": {
+    "compile": "npx tsc",
+    "dev": "npx tsc && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaibhav0806/reminders-xyz.git"
+  },
+  "author": "Vaibhav Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaibhav0806/reminders-xyz/issues"
+  },
+  "homepage": "https://github.com/vaibhav0806/reminders-xyz#readme",
+  "dependencies": {
+    "typescript": "^5.5.3"
+  }
+}
