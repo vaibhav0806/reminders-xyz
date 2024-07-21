@@ -3,6 +3,7 @@ const { Command } = require("commander");
 import { addTask } from "../utils/addTask";
 import { listTasks } from "../utils/listTasks";
 import { removeTask } from "../utils/removeTask";
+import { initConfig } from '../utils/initConfig';
 
 console.log(figlet.textSync("reminders-xyz"));
 
@@ -15,11 +16,15 @@ program
   .option("-a, --add ", "add a task")
   .option("-l, --list", "list all tasks")
   .option("-r, --remove", "remove a task")
+  .option("-i, --init", "initialize user configuration")
   .parse(process.argv);
 
 const options = program.opts();
 
 
+if (options.init) {
+  initConfig();
+}
 
 if (options.add) {
   addTask();

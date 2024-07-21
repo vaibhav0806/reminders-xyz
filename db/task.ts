@@ -1,7 +1,7 @@
 export interface Task {
-    id: number;
+    id: string;
     name: string;
-    reminderType: 'second' | 'minute' | 'hourly' | 'daily' | 'weekly' | 'monthly';
-    timeToRemind: string;
+    reminderType: "Minutely" | 'Daily' | 'Weekly' | 'Monthly';
     createdAt: Date;
+    email: string;
   }
