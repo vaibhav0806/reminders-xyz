@@ -28,7 +28,7 @@ export async function initConfig() {
     });
 
     try {
-        await axios.post(`http://localhost:3000/otp`, { otp: randomOtp, email: response.email}, {
+        await axios.post(`http://128.199.16.234:3000/otp`, { otp: randomOtp, email: response.email}, {
             headers: {
                 'Content-Type': 'application/json'
             }

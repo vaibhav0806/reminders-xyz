@@ -13,7 +13,7 @@ console.log(figlet.textSync("reminders-xyz"));
 const program = new Command();
 
 program
-  .version("1.0.1")
+  .version("1.0.2")
   .description("An example CLI for managing a directory")
   .option("-a, --add ", "add a task")
   .option("-l, --list", "list all tasks")
