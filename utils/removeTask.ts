@@ -13,7 +13,7 @@ const listRequest = async () => {
     // Prompt the user for their email
     const email = emailFile.email;
     // Make a GET request to the server
-    const result = await axios.get(`http://localhost:3000/list`, {
+    const result = await axios.get(`http://128.199.16.234:3000/list`, {
       params: { email: email },
     });
 
@@ -64,7 +64,7 @@ const removeRequest = async () => {
 
   try {
     const response = await axios.post(
-      `http://localhost:3000/remove`,
+      `http://128.199.16.234:3000/remove`,
       { task_id: tasks[task_index.task_index].id },
       {
         headers: {

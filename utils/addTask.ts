@@ -39,7 +39,7 @@ export const addTask = async () => {
     console.log(newTask);
 
     try {
-        const response = await axios.post(`http://localhost:3000/add`, newTask, {
+        const response = await axios.post(`http://128.199.16.234:3000/add`, newTask, {
             headers: {
                 'Content-Type': 'application/json'
             }

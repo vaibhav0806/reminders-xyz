@@ -10,7 +10,7 @@ export const listTasks = async () => {
         // Prompt the user for their email
         const email = emailFile.email;
         // Make a GET request to the server
-        const result = await axios.get(`http://localhost:3000/list`, {
+        const result = await axios.get(`http://128.199.16.234:3000/list`, {
             params: { email: email }
         });
 
