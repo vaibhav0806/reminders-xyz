@@ -28,7 +28,7 @@ export async function initConfig() {
     });
 
     try {
-        await axios.post(`http://128.199.16.234:3000/otp`, { otp: randomOtp}, {
+        await axios.post(`http://localhost:3000/otp`, { otp: randomOtp, email: response.email}, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -48,14 +48,18 @@ export async function initConfig() {
         message: 'Please enter the OTP sent to your address:',
         validate: (input) => {
             // Basic email validation
-            return  input === randomOtp? true : 'Wrong OTP entered';
+            return  input === randomOtp? true : false;
         }
     });
+
+    if(!otp) {
+        console.error(`ERR: Wrong OTP entered`);
+        process.exit(1);
+    }
 
     // Create the config file with the email
     const config: Config = { email: response.email };
     fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
 
-    console.log(`Configuration file created at ${configPath}`);
     console.log('Email stored successfully!');
 }
