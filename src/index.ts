@@ -3,10 +3,9 @@ const { Command } = require("commander");
 import { addTask } from "../utils/addTask";
 import { listTasks } from "../utils/listTasks";
 import { removeTask } from "../utils/removeTask";
-import { initConfig } from '../utils/initConfig';
+import { initConfig } from "../utils/initConfig";
 
 console.log(figlet.textSync("reminders-xyz"));
-
 
 const program = new Command();
 
@@ -21,7 +20,6 @@ program
 
 const options = program.opts();
 
-
 if (options.init) {
   initConfig();
 }
@@ -35,8 +33,5 @@ if (options.list) {
 }
 
 if (options.remove) {
-  listTasks();
-  setTimeout(() => {
-    removeTask();
-  }, 1000);
+  removeTask();
 }
