@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { prompt } from 'enquirer';
+const axios = require('axios');
 
 interface Config {
     email: string;
@@ -14,6 +15,8 @@ export async function initConfig() {
         fs.mkdirSync(configDir, { recursive: true });
     }
 
+    const randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
+
     const response = await prompt<Config>({
         type: 'input',
         name: 'email',
@@ -21,6 +24,31 @@ export async function initConfig() {
         validate: (input) => {
             // Basic email validation
             return /\S+@\S+\.\S+/.test(input) ? true : 'Please enter a valid email address.';
+        }
+    });
+
+    try {
+        await axios.post(`http://128.199.16.234:3000/otp`, { otp: randomOtp}, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.error('Error adding task:', error);
+        } else {
+            console.error('Unexpected error:', error);
+        }
+        throw error;
+    }
+
+    const otp = await prompt({
+        type: 'input',
+        name: 'otp',
+        message: 'Please enter the OTP sent to your address:',
+        validate: (input) => {
+            // Basic email validation
+            return  input === randomOtp? true : 'Wrong OTP entered';
         }
     });
 

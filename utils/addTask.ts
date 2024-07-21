@@ -17,10 +17,11 @@ const question1 = [
 const select_prompt = new Select({
     name: "color",
     message: "Pick an interval",
-    choices: ["Minutely", "Daily", "Weekly", "Monthly"],
+    choices: ["Hourly", "Daily", "Weekly", "Monthly"],
 });
 
 export const addTask = async () => {
+
     const task_name = await enqprompt(question1);
     let rem_period: any = "";
     await select_prompt.run().then((answer: any) => (rem_period = answer));

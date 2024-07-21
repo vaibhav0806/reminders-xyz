@@ -1,8 +1,11 @@
 {
   "name": "reminders-xyz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reminder client",
   "main": "src/index.ts",
+  "bin": {
+    "reminders-xyz": "./dist/src/index.js"
+  },
   "scripts": {
     "build": "npx tsc",
     "dev": "npx tsc && node ./dist/src/index.js",
